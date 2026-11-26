@@ -11,6 +11,7 @@ export function Footer({ lang }: { lang: Lang }) {
           <div className="footer-col">
             <strong className="footer-brand">{t.footer.company}</strong>
             <span>{t.contact.addressValue}</span>
+            <span>{t.topbar.hours}</span>
           </div>
           <div className="footer-col">
             <strong>{t.nav.services}</strong>
@@ -28,7 +29,7 @@ export function Footer({ lang }: { lang: Lang }) {
             <strong>{t.nav.contact}</strong>
             <a href={contact.phoneHref}>{contact.phoneDisplay}</a>
             <a href={`mailto:${contact.email}`}>{contact.email}</a>
-            <span>{t.topbar.hours}</span>
+            <a href={whatsappUrl(t.cta.whatsappMsg)} target="_blank" rel="noopener">WhatsApp</a>
           </div>
         </div>
         <div className="container footer-bottom">© {new Date().getFullYear()} {t.footer.company} {t.footer.rights}</div>
